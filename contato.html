@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criticando.Lia</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="base">
+    <header>
+      <div class="menu">
+        <ul>
+          <li class="selecionado">
+            <a href="index.html">Início</a>
+          </li>
+          <li>
+            <a href="sobre.html">Sobre mim</a>
+          </li>
+          <li>
+            <a href="contato.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+      <div class="apresentacao">
+        <div>
+          <h1>
+            Criticando.Lia
+          </h1>
+        </div>
+        <div>
+          <p class="subtitulo">
+            <span>"Coisas e coisas"</span>
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="site">
+      <article>
+        <div class="contato">
+          <h2>Entre em contato comigo</h2>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+          <button type="submit" onclick="enviar()">
+            Enviar
+          </button>
+        </div>
+      </article>
+      <aside>
+        <div class="menu-direito">
+          <div>
+            <h2>Olá</h2>
+            <div>
+              <div class="sobremim">
+                Meu nome é Natalia Borges, e este blog será repleto de críticas para os amantes de leitura.
+              </div>
+            </div>
+          </div>
+          <div class="redes-sociais">
+            <h2>minhas redes</h2>
+            <div>
+              <a href="https://www.facebook.com/natalia.borges.9693001" target="_blank">
+                <img src="imagens/facebook.png" class="facebook" alt="facebook">
+              </a>
+              <a href="https://www.instagram.com/lia.b33" target="_blank">
+                <img src="imagens/instagram.png" alt="instagram">
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    function enviar() {
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      if (nome != '' && email != '' && mensagem != '') {
+        alert(`Obrigada ${nome}, mensagem enviada com sucesso.`);
+      } else {
+        alert('Você precisa digitar seu nome, email e uma mensagem.')
+      }
+    }
+  </script>
+
+</body>
+
+</html>
